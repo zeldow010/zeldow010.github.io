@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+main {
+  max-width: 750px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: white;
+}
+
+.logo {
+  width: 75%;
+  max-width: 250px;
+  margin: 0 auto 2em;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.mailing_list {
+  width: 100%;
+  height: 65em;
+}
+
+.welcome {
+  position: relative;
+}
+
+.welcome::after {
+  position: absolute;
+  content: '';
+  top: 1.25em;
+  height: 2px;
+  width: 7.5em;
+  left:0;
+  background-color: black;
+}
+
+.container {
+  position:relative;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+.container::after {
+  content: '';
+  position:absolute;
+  left: 50%;
+  bottom: 0em;
+  width: 50%;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: black;
+}
