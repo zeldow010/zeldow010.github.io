@@ -36,20 +36,6 @@ main {
   height: 65em;
 }
 
-h1, h2, h3 {
-  position: relative;
-}
-
-/* h1::after, h2::after, h3::after {
-  position: absolute;
-  content: '';
-  top: 1.25em;
-  height: 2px;
-  width: 7.5em;
-  left:0;
-  background-color: #eaaf18;
-} */
-
 .container {
   position:relative;
   margin-bottom: 1em;
