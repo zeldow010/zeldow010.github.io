@@ -5,6 +5,8 @@ input, select {
     color: white;
     padding: .75em 1rem .5em;
     width: 100%;
+
+    border-radius: calc(.5em - 2px);
 }
 
 select {
@@ -99,8 +101,11 @@ input[type="checkbox"] {
 }
 
 .consent_container label {
+    display: block;
     position: relative;
     padding-left: 3em;
+
+    cursor: pointer;
 }
 
 .consent_container label::after {
@@ -108,7 +113,10 @@ input[type="checkbox"] {
     content: '';
 
     left: .5em;
-    top:-.25em;
+    top:50%;
+
+    transform: translateY(-50%);
+
     width: 1.5em;
     height: 1.5em;
 
@@ -133,7 +141,7 @@ input[type="checkbox"] {
     color: #222;
     border-radius: .5em;
     
-    width: fit-content;
+    width: 12em;
     
     padding: 1em 2em;
     margin-top: 2em;
@@ -142,7 +150,17 @@ input[type="checkbox"] {
     font-weight: bold;
 }
 
-.signup_btn:hover {
+.signup_btn:not(:disabled):hover {
     box-shadow: inset 0 15px 15px -5px rgba(0,0,0,.5);
     filter: brightness(.8);
+}
+
+input:disabled,
+input:disabled + label,
+select:disabled {
+    cursor: not-allowed;
+    opacity: .5;
+    filter: saturate(.5);
+    user-select: none;
+    /* pointer-events: none; */
 }

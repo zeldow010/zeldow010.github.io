@@ -36,7 +36,7 @@ hr {
 
 nav {
   position: absolute;
-  top: 3em;
+  top: 2em;
   left: 50%;
   transform: translateX(-50%);
 
@@ -76,7 +76,7 @@ nav {
 
   background-image: url('images/DSCF9048.JPG');
   background-size: cover;
-  background-position: 35% 0%;
+  background-position: 35% 10%;
 
   color: white;
   text-align: center;
@@ -91,9 +91,9 @@ nav {
   width: 100%;
   left:0;
   top: 0;
-  height: 15%;
+  height: 35%;
 
-  background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,0));
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
   z-index: 1;
 }
 
@@ -112,10 +112,10 @@ nav {
 .logo {
   position: relative;
   aspect-ratio: 1;
-  width: 50%;
-  max-width: 275px;
+  width: 25%;
+  max-width: 250px;
 
-  margin: 5em auto;
+  margin: 2.5em auto;
   
   z-index: 2;
 }
@@ -183,8 +183,9 @@ a:hover {
 
 .about-page h1 {
   position: absolute;
-  bottom: 1.5em;
   width: 100%;
+
+  bottom:0;
 
   font-size: 3em;
   text-align: center;
@@ -197,4 +198,18 @@ a:hover {
   max-width: 100ch;
   margin: 0 auto;
   height: 100%;
+}
+
+.conductor_img {
+  float: right;
+  width: 35%;
+  margin: .5em 0em .5em 1em;
+}
+
+.conductor_img img {
+  object-fit: cover;
+  aspect-ratio: 2.5/3;
+  -webkit-clip-path: polygon(15% 0%, 85% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
+  clip-path: polygon(15% 0%, 85% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
+  display: block;
 }
