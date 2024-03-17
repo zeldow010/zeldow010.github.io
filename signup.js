@@ -41,11 +41,18 @@ form.addEventListener('change', (e) => {
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  const form_data = new FormData(form);
+
   form.querySelectorAll('input').forEach(input => {
     input.disabled = true;
   })
   preferred_instrument_select.disabled = true;
   submit_btn.value = "Signing up...";
+
+  await fetch('https://script.google.com/macros/s/AKfycbzfd4X0wNt4Ohd7itePP4Br_qw8bGmQn2iyAxkHbuGPgoul3rRR_cQkcQWdytILYFLkPQ/exec', {
+    method: 'POST',
+    body: form_data
+  });
 })
 
 const update_select = () => {

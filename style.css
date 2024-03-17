@@ -21,7 +21,7 @@ main {
   width: 95%;
   max-width: 100ch;
   
-  padding: 2em 3em;
+  padding: 2em 3em 3em;
   margin: 0 auto;
 
   background-color: #222;
@@ -41,6 +41,10 @@ nav {
   transform: translateX(-50%);
 
   font-size: 1.25em;
+}
+
+p {
+  line-height: 1.5;
 }
 
 #home_nav {
@@ -203,7 +207,7 @@ a:hover {
 .conductor_img {
   float: right;
   width: 35%;
-  margin: .5em 0em .5em 1em;
+  margin: 0em 0em .5em 1em;
 }
 
 .conductor_img img {

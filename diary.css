@@ -138,6 +138,7 @@ input[type="radio"] {
 
     border-radius: .5em;
     border:none;
+    width: 10em;
 }
 
 .submit_btn:disabled, label:has(input:disabled) {
