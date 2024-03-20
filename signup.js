@@ -10,6 +10,8 @@ const instrument_checkbox = document.getElementsByName("instruments");
 const preferred_instrument_select = document.getElementById('preferred_instrument');
 const preferred_options = preferred_instrument_select.querySelectorAll('option');
 
+const card_container = document.getElementById('card_container');
+
 let selected_instruments = [];
 
 instrument_checkbox.forEach(checkbox => {
@@ -49,10 +51,32 @@ form.addEventListener('submit', async (e) => {
   preferred_instrument_select.disabled = true;
   submit_btn.value = "Signing up...";
 
-  await fetch('https://script.google.com/macros/s/AKfycbzfd4X0wNt4Ohd7itePP4Br_qw8bGmQn2iyAxkHbuGPgoul3rRR_cQkcQWdytILYFLkPQ/exec', {
+  const response = await fetch('https://script.google.com/macros/s/AKfycbzfd4X0wNt4Ohd7itePP4Br_qw8bGmQn2iyAxkHbuGPgoul3rRR_cQkcQWdytILYFLkPQ/exec', {
     method: 'POST',
     body: form_data
   });
+
+  const { message } = await response.json();
+  
+  form.querySelectorAll('input').forEach(input => {
+    input.disabled = false;
+  })
+  preferred_instrument_select.disabled = false;
+  submit_btn.disabled = true;
+  submit_btn.value = "Signup to RTCB";
+
+  const new_card = document.createElement('div');
+
+  card_container.innerHTML = '';
+  new_card.classList.add('card')
+  new_card.classList.add(message == 'Error' ? 'failure_card' : 'success_card');
+  new_card.innerText = message == 'Error' ? 'This email is already signed up, if you think this is an error please email us!' : 'Successfully signed-up to our Mailing list. Please check you emails as you will have a \'Welcome guide\' filled with all the infomration you need to come to your first rehearsal!';
+  card_container.appendChild(new_card);
+  
+  if(message != 'Error') {
+    form.reset();
+    return;
+  }
 })
 
 const update_select = () => {
