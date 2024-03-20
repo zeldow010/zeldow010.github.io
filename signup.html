@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
+    <script defer src="signup.js"></script>
+    <title>Sign up | Rugby Town Concert Band</title>
+</head>
+<body>
+    <div id="card_container" class="card_container">
+    </div>
+    <main>
+        <div class="logo">
+            <img src="images/Default_Logo.png" alt="Rugby Town Concert Band Logo">
+        </div>
+        <hr>
+            <p><span class="emphasis-text">Thank you!</span></p>
+            <p>The band rehearses once a week, on a Sunday between 6pm and 9pm. Repertoire varies in difficulty levels, but generally we recommend a standard of around <strong>grade 5 or above</strong>, however all players are welcome to come along and try the band out.</p>
+            <p>New players can join for free for one term to try it out and see if RTCB is for them. After this, subs will be <strong>£30-35 per term</strong>.</p>
+            <p>Each term we aim towards a ticketed concert event, where we showcase our hard work throughout, but we also try and hold an additional couple of events throughout the year, whether that be a small casual lunchtime concert, or Christmas carol busking.</p>
+            <p>All players are welcome but we specifically would love to see players of: <em>Bass Clarinet, French Horn, and Percussion.</em></p>
+            <p>Thank you for checking out our sign-up page!</p>
+        <hr>
+        <form method="post" id="signup-form">
+            <div class="form_content">
+                <h2 class="emphasis-text">Mailing List Sign-up</h2>
+                <p>Please enter your details:</p>
+                <div class="input_container">
+                    <input type="text" name="name" id="name" placeholder=" ">
+                    <label for="name">Contact Name</label>
+                </div>
+                <div class="input_container">
+                    <input type="email" name="email" id="email" placeholder=" ">
+                    <label for="email">Email Address</label>
+                </div>
+                <hr>
+                <p>Please select all the instruments you would be willing to play:</p>
+                <div class="instruments_container">
+                    <input type="checkbox" name="instruments" value="piccolo" id="piccolo"><label class="instrument_checkbox" for="piccolo">Piccolo</label>
+                    <input type="checkbox" name="instruments" value="flute" id="flute"><label class="instrument_checkbox" for="flute">Flute</label>
+                    <input type="checkbox" name="instruments" value="eb clarinet" id="eb clarinet"><label class="instrument_checkbox" for="eb clarinet">Eb Clarinet</label>
+                    <input type="checkbox" name="instruments" value="bb clarinet" id="bb clarinet"><label class="instrument_checkbox" for="bb clarinet">Bb Clarinet</label>
+                    <input type="checkbox" name="instruments" value="alto clarinet" id="alto clarinet"><label class="instrument_checkbox" for="alto clarinet">Alto Clarinet</label>
+                    <input type="checkbox" name="instruments" value="bass clarinet" id="bass clarinet"><label class="instrument_checkbox" for="bass clarinet">Bass Clarinet</label>
+                    <input type="checkbox" name="instruments" value="oboe" id="oboe"><label class="instrument_checkbox" for="oboe">Oboe</label>
+                    <input type="checkbox" name="instruments" value="cor anglais" id="cor anglais"><label class="instrument_checkbox" for="cor anglais">Cor Anglais</label>
+                    <input type="checkbox" name="instruments" value="bassoon" id="bassoon"><label class="instrument_checkbox" for="bassoon">Bassoon</label>
+                    <input type="checkbox" name="instruments" value="soprano saxophone" id="soprano saxophone"><label class="instrument_checkbox" for="soprano saxophone">Soprano Saxophone</label>
+                    <input type="checkbox" name="instruments" value="alto saxophone" id="alto saxophone"><label class="instrument_checkbox" for="alto saxophone">Alto Saxophone</label>
+                    <input type="checkbox" name="instruments" value="tenor saxophone" id="tenor saxophone"><label class="instrument_checkbox" for="tenor saxophone">Tenor Saxophone</label>
+                    <input type="checkbox" name="instruments" value="baritone saxophone" id="baritone saxophone"><label class="instrument_checkbox" for="baritone saxophone">Baritone Saxophone</label>
+                    <input type="checkbox" name="instruments" value="trumpet" id="trumpet"><label class="instrument_checkbox" for="trumpet">Trumpet</label>
+                    <input type="checkbox" name="instruments" value="cornet" id="cornet"><label class="instrument_checkbox" for="cornet">Cornet</label>
+                    <input type="checkbox" name="instruments" value="flugel horn" id="flugel horn"><label class="instrument_checkbox" for="flugel horn">Flugel Horn</label>
+                    <input type="checkbox" name="instruments" value="french horn" id="french horn"><label class="instrument_checkbox" for="french horn">French Horn</label>
+                    <input type="checkbox" name="instruments" value="tenor horn" id="tenor horn"><label class="instrument_checkbox" for="tenor horn">Tenor Horn</label>
+                    <input type="checkbox" name="instruments" value="tenor trombone" id="tenor trombone"><label class="instrument_checkbox" for="tenor trombone">Tenor Trombone</label>
+                    <input type="checkbox" name="instruments" value="bass trombone" id="bass trombone"><label class="instrument_checkbox" for="bass trombone">Bass Trombone</label>
+                    <input type="checkbox" name="instruments" value="euphonium" id="euphonium"><label class="instrument_checkbox" for="euphonium">Euphonium</label>
+                    <input type="checkbox" name="instruments" value="tuba" id="tuba"><label class="instrument_checkbox" for="tuba">Tuba</label>
+                    <input type="checkbox" name="instruments" value="string bass" id="string bass"><label class="instrument_checkbox" for="string bass">String Bass</label>
+                    <input type="checkbox" name="instruments" value="timpani" id="timpani"><label class="instrument_checkbox" for="timpani">Timpani</label>
+                    <input type="checkbox" name="instruments" value="drum kit" id="drum kit"><label class="instrument_checkbox" for="drum kit">Drum Kit</label>
+                    <input type="checkbox" name="instruments" value="mallet percussion" id="mallet percussion"><label class="instrument_checkbox" for="mallet percussion">Mallet Percussion</label>
+                    <input type="checkbox" name="instruments" value="auxiliary percussion" id="auxiliary percussion"><label class="instrument_checkbox" for="auxiliary percussion">Auxiliary Percussion</label>
+                    <input type="checkbox" name="instruments" value="piano" id="piano"><label class="instrument_checkbox" for="piano">Piano</label>
+                    <input type="checkbox" name="instruments" value="other" id="other"><label class="instrument_checkbox" for="other">Other</label>
+                </div>
+                <p>Please select that instrument you would prefer to play regularly:</p>
+                <div class="input_container">
+                    <select id="preferred_instrument" name="preferred_instrument" required disabled>
+                      <option disabled selected hidden>Select an Instrument</option>
+                      <option>No Preference</option>
+                      <noscript>
+                        <optgroup label="Woodwind">
+                          <option value="piccolo">Piccolo</option>
+                          <option value="flute">Flute</option>
+                          <option value="eb clarinet">Eb Clarinet</option>
+                          <option value="bb clarinet">Bb Clarinet</option>
+                          <option value="alto clarinet">Alto Clarinet</option>
+                          <option value="bass clarinet">Bass Clarinet</option>
+                          <option value="oboe">Oboe</option>
+                          <option value="cor anglais">Cor Anglais</option>
+                          <option value="bassoon">Bassoon</option>
+                          <option value="soprano saxophone">Soprano Saxophone</option>
+                          <option value="alto saxophone">Alto Saxophone</option>
+                          <option value="tenor saxophone">Tenor Saxophone</option>
+                          <option value="baritone saxophone">Baritone Saxophone</option>
+                        </optgroup>
+                        <optgroup label="Brass">
+                          <option value="trumpet">Trumpet</option>
+                          <option value="cornet">Cornet</option>
+                          <option value="flugel horn">Flugel Horn</option>
+                          <option value="french horn">French Horn</option>
+                          <option value="tenor horn">Tenor Horn</option>
+                          <option value="tenor trombone">Tenor Trombone</option>
+                          <option value="bass trombone">Bass Trombone</option>
+                          <option value="euphonium">Euphonium</option>
+                          <option value="tuba">Tuba</option>
+                        </optgroup>
+                        <optgroup label="Percussion">
+                          <option value="string bass">String Bass</option>
+                          <option value="timpani">Timpani</option>
+                          <option value="drum kit">Drum Kit</option>
+                          <option value="mallet percussion">Mallet Percussion</option>
+                          <option value="auxiliary percussion">Auxiliary Percussion</option>
+                          <option value="piano">Piano</option>
+                        </optgroup>
+                        <option value="other">Other</option>
+                      </noscript>
+                    </select>
+                    <label for="preferred_instrument">Preferred Instrument</label>
+                  </div>
+                  <hr>
+                  <div class="consent_container">
+                      <input type="checkbox" name="consent_checkbox" id="consent">
+                      <label for="consent">By ticking this box you are confirming that you allow Rugby Town Concert Band to hold the information.</label>
+                  </div>
+                  <input id="submit_btn" class="signup_btn" type="submit" value="Signup to RTCB" disabled>
+            </div>
+        </form>
+    </main>
+    <div class="footer">
+    <ul>
+      <li>Subscribe to <a href="https://www.youtube.com/@rugbytownconcertband">our YouTube Channel</a></li>
+      <li>Follow us on <a href="https://www.facebook.com/rugbytownconcertband">Facebook</a></li>
+    </ul>
+  </div>
+</body>
+</html>
