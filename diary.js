@@ -54,6 +54,7 @@ const add_event_element = (form, event, index) => {
     const event_btns = document.createElement('div');
 
     event_container.classList = "event_container";
+    event_details.classList = "event_details";
     event_btns.classList = "btn_container";
 
     if(index == 0) {
