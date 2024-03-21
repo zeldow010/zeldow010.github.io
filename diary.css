@@ -1,3 +1,8 @@
+main {
+    width: 97.5%;
+    padding: 2em 3em 3em;
+}
+
 .logo {
     width: 50%;
     max-width: 250px;
@@ -37,11 +42,12 @@
 }
 
 .event_container {
-    display: grid;
-
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: .5em;
 
     padding: 1em 1.5em;
 }
@@ -118,6 +124,7 @@ input[type="radio"] {
 .btn_container {
     display: grid;
     grid-template-columns: auto auto;
+    margin-left: auto;
 }
 
 .submit_btn {
