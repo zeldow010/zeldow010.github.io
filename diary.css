@@ -107,14 +107,16 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.reject_btn:not(:disabled):hover, .reject_btn:not(:disabled):has(input[type="radio"]:checked) {
+.reject_btn:not(:disabled):hover, 
+.reject_btn:not(:disabled):has(input[type="radio"]:checked) {
     color: red;
     background-color: rgba(92, 28, 28, 0.5);
     border-color: red;
     border-left: 2px solid red;
 }
 
-.going_btn:not(:disabled):hover, .going_btn:not(:disabled):has(input[type="radio"]:checked) {
+.going_btn:not(:disabled):hover, 
+.going_btn:not(:disabled):has(input[type="radio"]:checked) {
     color: green;
     background-color: rgba(28, 92, 28, 0.5);
     border-color: green;

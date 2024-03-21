@@ -67,6 +67,11 @@ const add_event_element = (form, event, index) => {
 
     const event_name = document.createElement('h2');
     event_name.innerText = event.name;
+    if(event.type == 'Cancelled') {
+        event_name.style.textDecoration = 'line-through';
+        event_name.style.color = 'grey';
+    };
+
     event_details.appendChild(event_name);
 
     if(event.type != 'Rehearsal') {
@@ -104,11 +109,19 @@ const add_event_element = (form, event, index) => {
     event_going_btn.type = "radio";
     event_going_btn.name = event.id;
     event_going_btn.value = "true";
-    event_going_btn.checked = event?.response?.response == true;
+
+    if(event.type=="Cancelled") {
+        event_going_btn.disabled = true;
+        event_going_btn.dataset.cancelled = true;
+    }
     
     const event_reject_btn = event_going_btn.cloneNode(true);
     event_reject_btn.value = "false";
-    event_reject_btn.checked = event?.response?.response == false;
+    
+    if(event.type!="Cancelled")  {
+        event_going_btn.checked = event?.response?.response == true;
+        event_reject_btn.checked = event?.response?.response == false;
+    }
 
     
     event_going_label.appendChild(event_going_btn)
@@ -160,7 +173,9 @@ const handle_submit = async (e) => {
     submitter.disabled = false;
     submitter.value = 'Update Diary';
 
-    response_btns.forEach(btn => { btn.disabled = false });
+    response_btns.forEach(btn => { 
+        if(!("cancelled" in btn.dataset)) btn.disabled = false 
+    });
 
     console.log(response);
 }
