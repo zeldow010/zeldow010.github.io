@@ -132,7 +132,7 @@ input[type="radio"] {
     font-size: 1em;
 
     margin-left: auto;
-    margin-top: 1em;
+    margin-top: 3em;
 
     padding: 1em 2em;
 
@@ -145,6 +145,17 @@ input[type="radio"] {
     opacity: 0.5;
     filter: saturate(.5);
     cursor: wait;
+}
+
+.event_tag {
+    padding: 0 .5em;
+    margin-top: .5em;
+    width: fit-content;
+    
+    border-radius: .25em;
+
+    color: white;
+    font-weight: bold;
 }
 
 @keyframes spin {

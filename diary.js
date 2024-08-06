@@ -36,7 +36,7 @@ const onload = async () => {
 
 
     response?.events.forEach((event, i) => {
-        add_event_element(new_form, event, i)
+        add_event_element(new_form, event, i);
     });
 
     const submit_btn = document.createElement('input');
@@ -68,8 +68,28 @@ const add_event_element = (form, event, index) => {
     event_name.innerText = event.name;
     event_details.appendChild(event_name);
 
+    if(event.type != 'Rehearsal') {
+        const type_list = {
+            'Concert Rehearsal': '#3f51b5',
+            'Concert': 'purple',
+            'First Rehearsal': 'Green',
+            'Cancelled': 'red'
+        }
+        const event_tag = document.createElement('div');
+        event_tag.innerText = event.type;
+        event_tag.classList.add('event_tag');
+        event_tag.style.background = type_list[event.type];
+        event_details.appendChild(event_tag);
+    }
+
     const event_timestamp = document.createElement('p');
-    event_timestamp.innerText = `${event.date} (${event.start_time}) - ${event.location}`;
+    event_timestamp.innerText = event.date.day;
+    const super_text = document.createElement('sup');
+    super_text.innerText = event.date.suffix;
+    event_timestamp.appendChild(super_text);
+    event_timestamp.append(` ${event.date.month} (${event.start_time})`);
+    event_timestamp.appendChild(document.createElement('br'));
+    event_timestamp.append(`${event.location}`)
     event_details.appendChild(event_timestamp);
 
     const event_going_label = document.createElement('label');
@@ -101,6 +121,16 @@ const add_event_element = (form, event, index) => {
 
     event_container.appendChild(event_details);
     event_container.appendChild(event_btns);
+
+    if(event.type == 'First Rehearsal') {
+        form.appendChild(document.createElement('hr'));
+        const next_term = document.createElement('h2');
+        next_term.innerText = "Next Term..."
+        next_term.style.fontStyle = 'italic'
+        next_term.style.color = 'grey';
+        next_term.style.marginLeft = '1em';
+        form.appendChild(next_term);
+    };
 
     form.appendChild(event_container);
 }

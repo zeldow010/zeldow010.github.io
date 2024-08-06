@@ -164,3 +164,36 @@ select:disabled {
     user-select: none;
     /* pointer-events: none; */
 }
+
+.card_container {
+    position: fixed;
+    width: 95%;
+    max-width: 100ch;
+    
+    padding: 2em 3em 3em;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1.5em;
+    z-index: 5;
+}
+
+.card {
+    border-radius: .5em;
+    border: 2px solid grey;
+    padding: .5em 1em;
+    box-shadow: 0 10px 15px -10px rgba(0,0,0,.2);
+    margin-bottom: 1em;
+}
+
+.success_card {
+    background-color: hsl(120, 15%, 55%);
+    color: hsl(120, 85%, 10%);
+    border-color: hsl(120, 85%, 10%);
+}
+
+.failure_card {
+    background-color: hsl(0, 30%, 60%);
+    color: hsl(0, 75%, 15%);
+    border-color: hsl(0, 74%, 15%);
+}
