@@ -4,7 +4,7 @@ const member_element = document.getElementById('member');
 const token = new URLSearchParams(window.location.search).get('token');
 
 const onload = async () => {
-    const data = await fetch(`https://script.google.com/macros/s/AKfycbywxmHr7tvUzor3n_Wf7wRBimkiv4inje0kULvMBil11S9zXxc68UCCRdAcu1CRP-IOMg/exec?token=${token}`);
+    const data = await fetch(`https://script.google.com/macros/s/AKfycbxigMqHseIkXyuLogXx1WL0FGKtb3rLpMeJHgtpgha_66UriEdOKghzHmKYlvIzWeqnRQ/exec?token=${token}`);
 
     const response = await data.json();
     
